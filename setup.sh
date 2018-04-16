@@ -39,4 +39,12 @@ else
     echo "No requirements.txt found in repo"
 fi
 
+# If there is a requirements.txt file in the repo, Install python dependencies
+
+if [ -f ${BASE_DIR}/${REPO_NAME}/requirements.txt ]; then
+    echo "Installing Python3 requirements from ${GIT_REPO}/requirements3.txt"
+    pip3 install -r ${BASE_DIR}/${REPO_NAME}/requirements3.txt
+else
+    echo "No requirements3.txt found in repo"
+fi
 
